@@ -66,7 +66,7 @@ const ChatBox = ({ roomData, setmsg, sendmessage, msg, AllMsg, user }) => {
                   }}
                 ></Stack>
                 <List sx={{ p: 0, overflowY: "auto", flex: "1 0 0" }}>
-                  {AllMsg.map((item, index) => (
+                  {AllMsg?.map((item, index) => (
                     <ListItem
                       sx={
                         item.sender._id === user._id

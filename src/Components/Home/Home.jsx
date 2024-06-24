@@ -86,6 +86,7 @@ const Home = () => {
 
 
   const setMsg = (data)=>{
+    console.log(data)
     setAllMsg(data);
   }
   // const [List, setList] = useState([]);
@@ -149,6 +150,7 @@ const Home = () => {
             className="tab"
             aria-label="Online "
             checked
+            onChange={() => {}}
           />
           <div
             role="tabpanel"
@@ -163,6 +165,7 @@ const Home = () => {
                     key={index}
                     roomData={roomData}
                     setroomData={setroomData}
+                    setMsg={setMsg}
                   />
                 );
               })}

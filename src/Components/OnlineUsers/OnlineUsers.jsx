@@ -3,7 +3,8 @@ import React from "react";
 import { CiUser } from "react-icons/ci";
 
 // eslint-disable-next-line react/prop-types
-const OnlineUsers = ({ _id, name, email, roomData, setroomData, socketId ,setMsg}) => {
+const OnlineUsers = (props) => {
+  const { _id, name, email, roomData, setroomData, socketId ,setMsg} = props
   const user = {
     _id,
     name,
@@ -27,8 +28,8 @@ const OnlineUsers = ({ _id, name, email, roomData, setroomData, socketId ,setMsg
     });
     // console.log(await response.json()); 
     const res = await response.json();
-    // console.log(setAllMsg);
-    setMsg(res.messages.messages);
+    // console.log(res);
+    setMsg(res.messages);
   };
   return (
     <div className="flex gap-4 cursor-pointer">
